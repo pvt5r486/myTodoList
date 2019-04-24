@@ -1,0 +1,31 @@
+.input-group-text, #addTask, .nav-link, #uncomplete, #clearAll, #typingTask, .form-check-label{
+  font-family: $font;
+}
+
+.form-check-input, .form-check-label{
+  cursor: pointer;
+}
+
+.list-group-item{
+  transition: background-color .3s;
+  cursor: pointer;
+  &.complete{
+    .form-check-label{
+      transition: color .5s;
+      text-decoration:line-through;
+      font-style: italic;
+      color: gray;
+    }
+  }
+  button.close{
+    &:focus{
+      outline: none;  
+    }
+    &:active{
+      box-shadow: 5px 3px 3px darken(#e9ecef, 10%) inset;
+    }
+  }
+  &:hover{
+    background-color: #e9ecef;
+  }
+}
